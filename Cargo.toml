@@ -1,0 +1,15 @@
+[package]
+name = "txk"
+version = "0.1.0"
+authors = ["Robert Sedlacek <rs@474.at>"]
+license = "MIT"
+description = "Distinction, validation and optimized storage for text data"
+keywords = ["text", "kind", "newtype"]
+readme = "README.mkd"
+
+[dependencies]
+static_assertions = "0.2.5"
+serde = { version = "1.0", optional = true }
+
+[dev-dependencies]
+serde_json = "1.0"

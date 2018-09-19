@@ -1,0 +1,13 @@
+Distinction, validation and optimized storage for text values.
+
+# Features
+
+* Specialized storage for `&'static str` values.
+* Small string storage for values below a certain length.
+* Shared, thread-safe storage for longer, non-static values.
+* Main `Text<K>` type where `K` is a `Kind` identifying a kind of text.
+* Reusable `Check` constraints associated with `Kind` types via `Kind::Check`.
+* Cheap `&Text<Source>` to `&Text<Target>` conversions.
+* The `Error` type attaches the `Kind::NAME` to the beginning of the error chain.
+* Optional `serde` support with the `serde` feature.
+
