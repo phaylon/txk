@@ -672,7 +672,7 @@ where
 // Turn the `&Text<K>` into a `&Text<K2>` via *const _ pointers.
 // It is crucial that `Text<K>` and `Text<K2>` always have the same layout for this to
 // work. It is assumed this is the case because `K` is a ZST phantom type, not changing
-// the storage, and the `Text` struct has a `C` layout.
+// the storage, and the `Text` struct has a `transparent` layout.
 unsafe fn transmute_kind<K1, K2>(source: &Text<K1>) -> &Text<K2>
 where
     K1: Kind,
